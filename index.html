@@ -1,618 +1,436 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0a">
 
-  <title>RPM Social Club</title>
-  <meta name="description" content="RPM Social Club. Cars, community and experiences in Naples, Florida.">
+  <title>RPM Social Club | Naples Automotive Community</title>
+  <meta name="description" content="RPM Social Club brings automotive enthusiasts together through curated drives, gatherings, and memorable experiences in Naples and Southwest Florida.">
+  <meta name="author" content="RPM Social Club">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rpmsocialclub.com/">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="RPM Social Club">
+  <meta property="og:title" content="RPM Social Club | A Club for the Road Ahead">
+  <meta property="og:description" content="Curated drives, considered gatherings, and a genuine automotive community in Naples, Florida.">
+  <meta property="og:url" content="https://rpmsocialclub.com/">
+  <meta property="og:image" content="https://rpmsocialclub.com/assets/images/rpm-lifestyle-placeholder.jpg">
+  <meta property="og:image:width" content="1888">
+  <meta property="og:image:height" content="833">
+  <meta property="og:image:alt" content="An early-morning automotive gathering in Naples, Florida">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RPM Social Club | A Club for the Road Ahead">
+  <meta name="twitter:description" content="Curated drives, considered gatherings, and a genuine automotive community in Naples, Florida.">
+  <meta name="twitter:image" content="https://rpmsocialclub.com/assets/images/rpm-lifestyle-placeholder.jpg">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "RPM Social Club",
+      "url": "https://rpmsocialclub.com/",
+      "description": "A premium automotive social club connecting enthusiasts through curated drives, gatherings, events, and experiences.",
+      "areaServed": [
+        "Naples, Florida",
+        "Southwest Florida"
+      ]
     }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #080808;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1180px, 90%);
-      margin: auto;
-    }
-
-    /* NAVIGATION */
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(8, 8, 8, 0.82);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .nav-inner {
-      height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 1.15rem;
-      font-weight: 800;
-      letter-spacing: 3px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .nav-links a {
-      opacity: 0.75;
-      transition: 0.25s;
-    }
-
-    .nav-links a:hover {
-      opacity: 1;
-    }
-
-    .nav-button {
-      border: 1px solid rgba(255,255,255,0.5);
-      padding: 11px 20px;
-      opacity: 1 !important;
-    }
-
-    /* HERO */
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 80% 40%, rgba(255,255,255,0.10), transparent 28%),
-        radial-gradient(circle at 25% 80%, rgba(255,255,255,0.05), transparent 30%),
-        linear-gradient(135deg, #050505, #111111);
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 700px;
-      height: 700px;
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 50%;
-      right: -200px;
-      top: 100px;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding-top: 80px;
-    }
-
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 0.75rem;
-      opacity: 0.55;
-      margin-bottom: 22px;
-    }
-
-    h1 {
-      font-size: clamp(4rem, 10vw, 9rem);
-      line-height: 0.9;
-      letter-spacing: -5px;
-      font-weight: 900;
-      max-width: 1000px;
-    }
-
-    .hero-text {
-      font-size: clamp(1.05rem, 2vw, 1.35rem);
-      max-width: 600px;
-      color: #b7b7b7;
-      margin-top: 32px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      margin-top: 40px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      padding: 15px 28px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      transition: 0.25s;
-    }
-
-    .button-primary {
-      background: #ffffff;
-      color: #000000;
-    }
-
-    .button-primary:hover {
-      background: #dcdcdc;
-    }
-
-    .button-secondary {
-      border: 1px solid #444;
-    }
-
-    .button-secondary:hover {
-      border-color: #ffffff;
-    }
-
-    /* SECTIONS */
-
-    section {
-      padding: 120px 0;
-    }
-
-    .section-label {
-      font-size: 0.7rem;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #777;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: clamp(2.5rem, 5vw, 5rem);
-      letter-spacing: -2px;
-      line-height: 1;
-      margin-bottom: 30px;
-    }
-
-    .about {
-      background: #0d0d0d;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .about-text {
-      color: #aaa;
-      font-size: 1.1rem;
-    }
-
-    .about-text p + p {
-      margin-top: 20px;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .stat {
-      background: #131313;
-      border: 1px solid #1e1e1e;
-      padding: 35px;
-    }
-
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-    }
-
-    .stat-label {
-      color: #777;
-      margin-top: 5px;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* EVENTS */
-
-    .events {
-      background: #080808;
-    }
-
-    .event-list {
-      border-top: 1px solid #242424;
-    }
-
-    .event {
-      display: grid;
-      grid-template-columns: 160px 1fr auto;
-      gap: 35px;
-      align-items: center;
-      padding: 35px 0;
-      border-bottom: 1px solid #242424;
-      transition: 0.25s;
-    }
-
-    .event:hover {
-      padding-left: 12px;
-    }
-
-    .event-date {
-      color: #777;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-    }
-
-    .event-name {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-
-    .event-location {
-      color: #777;
-      margin-top: 5px;
-    }
-
-    .event-arrow {
-      font-size: 1.7rem;
-    }
-
-    /* COMMUNITY */
-
-    .community {
-      text-align: center;
-      background:
-        radial-gradient(circle at center, #1a1a1a, #090909 65%);
-    }
-
-    .community h2 {
-      max-width: 850px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .community p {
-      max-width: 600px;
-      margin: 0 auto 35px;
-      color: #999;
-      font-size: 1.05rem;
-    }
-
-    /* FOOTER */
-
-    footer {
-      border-top: 1px solid #1d1d1d;
-      padding: 50px 0;
-      color: #777;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .footer-logo {
-      color: white;
-      font-weight: 800;
-      letter-spacing: 3px;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 800px) {
-
-      .nav-links a:not(.nav-button) {
-        display: none;
-      }
-
-      h1 {
-        letter-spacing: -3px;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-      }
-
-      .event {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
-
-      .event-arrow {
-        display: none;
-      }
-
-      section {
-        padding: 85px 0;
-      }
-    }
-
-  </style>
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-<nav>
-  <div class="container nav-inner">
-
-    <a href="#" class="logo">
-      RPM SOCIAL CLUB
-    </a>
-
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#events">Events</a>
-      <a href="#community">Community</a>
-      <a href="#community" class="nav-button">Join the Club</a>
-    </div>
-
-  </div>
-</nav>
-
-
-<header class="hero">
-
-  <div class="container hero-content">
-
-    <div class="eyebrow">
-      Naples, Florida
-    </div>
-
-    <h1>
-      DRIVE.<br>
-      CONNECT.<br>
-      BELONG.
-    </h1>
-
-    <p class="hero-text">
-      RPM Social Club brings together automotive enthusiasts through
-      curated drives, gatherings and experiences.
-    </p>
-
-    <div class="hero-buttons">
-
-      <a href="#community" class="button button-primary">
-        Join the Club
+  <header class="site-header" data-header>
+    <div class="shell nav">
+      <a class="brand" href="#top" aria-label="RPM Social Club home">
+        <span class="brand__mark">RPM</span>
+        <span class="brand__name">Social Club</span>
       </a>
 
-      <a href="#events" class="button button-secondary">
-        Upcoming Events
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+        <span class="sr-only">Open navigation</span>
+        <span class="nav__toggle-line" aria-hidden="true"></span>
+        <span class="nav__toggle-line" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav__menu" id="site-navigation" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#membership">Membership</a>
+        <a href="#instagram">Instagram</a>
+        <a class="nav__cta" href="#membership">Join the Club</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true">
+        <img
+          src="assets/images/rpm-lifestyle-placeholder.jpg"
+          width="1888"
+          height="833"
+          alt=""
+          fetchpriority="high"
+          decoding="async"
+        >
+      </div>
+      <div class="hero__wash" aria-hidden="true"></div>
+
+      <div class="shell hero__inner">
+        <div class="hero__copy" data-reveal>
+          <p class="eyebrow"><span>Naples, Florida</span> Automotive culture, considered</p>
+          <h1 id="hero-title">A club for<br><em>the road ahead.</em></h1>
+          <p class="hero__intro">
+            Curated drives, considered gatherings, and a community built around
+            everything that makes the journey worth taking.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--light" href="#membership">Join the Club</a>
+            <a class="text-link text-link--light" href="#events">
+              Explore events <span aria-hidden="true">↘</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__rail" aria-label="RPM Social Club focus">
+          <span>Cars</span>
+          <span>Community</span>
+          <span>Southwest Florida</span>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#about" aria-label="Scroll to learn about RPM Social Club">
+        <span>Discover</span>
+        <span class="hero__scroll-line" aria-hidden="true"></span>
       </a>
+    </section>
 
-    </div>
-
-  </div>
-
-</header>
-
-
-<section class="about" id="about">
-
-  <div class="container about-grid">
-
-    <div>
-
-      <div class="section-label">
-        The Club
-      </div>
-
-      <h2>
-        More than a car meet.
-      </h2>
-
-      <div class="about-text">
-
-        <p>
-          RPM Social Club is built around a shared passion for cars,
-          people and memorable experiences.
-        </p>
-
-        <p>
-          From weekend drives and cars and coffee to private gatherings
-          and destination events, our goal is simple: bring enthusiasts
-          together and build a genuine automotive community.
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <div class="stats">
-
-      <div class="stat">
-        <div class="stat-number">01</div>
-        <div class="stat-label">Community</div>
-      </div>
-
-      <div class="stat">
-        <div class="stat-number">02</div>
-        <div class="stat-label">Experiences</div>
-      </div>
-
-      <div class="stat">
-        <div class="stat-number">03</div>
-        <div class="stat-label">Driving</div>
-      </div>
-
-      <div class="stat">
-        <div class="stat-number">04</div>
-        <div class="stat-label">Naples</div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="events" id="events">
-
-  <div class="container">
-
-    <div class="section-label">
-      What's Next
-    </div>
-
-    <h2>
-      Upcoming events.
-    </h2>
-
-    <div class="event-list">
-
-      <div class="event">
-
-        <div class="event-date">
-          COMING SOON
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <p class="section-kicker"><span>01</span> The club</p>
+          <h2 id="about-title">It starts with cars.<br>It becomes much more.</h2>
         </div>
+
+        <div class="about__grid">
+          <div class="about__lead" data-reveal>
+            <p>
+              RPM Social Club connects automotive enthusiasts through curated
+              drives, gatherings, events, and experiences across Naples and
+              Southwest Florida.
+            </p>
+          </div>
+
+          <div class="about__body" data-reveal>
+            <p>
+              We believe the best automotive culture is as much about people as
+              it is about machines. The club is a place to share the road,
+              discover new routes, meet interesting people, and make time for
+              experiences that stay with you.
+            </p>
+            <p>
+              No posturing. No velvet rope energy. Just a thoughtful community
+              with a genuine appreciation for cars, conversation, and the
+              places a good drive can take us.
+            </p>
+
+            <div class="about__locations" aria-label="Club locations">
+              <span>Naples</span>
+              <span>Southwest Florida</span>
+            </div>
+          </div>
+        </div>
+
+        <blockquote class="about__quote" data-reveal>
+          <p>“The road is better when the company is good.”</p>
+          <footer>— The idea behind RPM</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section events" id="events" aria-labelledby="events-title">
+      <div class="shell">
+        <div class="events__intro">
+          <div class="section-heading section-heading--compact" data-reveal>
+            <p class="section-kicker"><span>02</span> What’s next</p>
+            <h2 id="events-title">Upcoming<br>gatherings.</h2>
+          </div>
+          <p class="events__note" data-reveal>
+            Our calendar is taking shape. Event details and dates will be
+            announced as each experience is confirmed.
+          </p>
+        </div>
+
+        <div class="event-list">
+          <article class="event-row" data-reveal>
+            <p class="event-row__date">Coming Soon</p>
+            <div class="event-row__main">
+              <h3>Cars &amp; Coffee</h3>
+              <p>Morning gathering</p>
+            </div>
+            <p class="event-row__place">Naples, Florida</p>
+            <span class="event-row__arrow" aria-hidden="true">↗</span>
+          </article>
+
+          <article class="event-row" data-reveal>
+            <p class="event-row__date">Coming Soon</p>
+            <div class="event-row__main">
+              <h3>Sunset Drive</h3>
+              <p>Evening drive</p>
+            </div>
+            <p class="event-row__place">Southwest Florida</p>
+            <span class="event-row__arrow" aria-hidden="true">↗</span>
+          </article>
+
+          <article class="event-row" data-reveal>
+            <p class="event-row__date">Coming Soon</p>
+            <div class="event-row__main">
+              <h3>RPM Social</h3>
+              <p>Club gathering</p>
+            </div>
+            <p class="event-row__place">Naples, Florida</p>
+            <span class="event-row__arrow" aria-hidden="true">↗</span>
+          </article>
+
+          <article class="event-row" data-reveal>
+            <p class="event-row__date">Coming Soon</p>
+            <div class="event-row__main">
+              <h3>Weekend Drive</h3>
+              <p>Curated route</p>
+            </div>
+            <p class="event-row__place">Southwest Florida</p>
+            <span class="event-row__arrow" aria-hidden="true">↗</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experience" aria-labelledby="experience-title">
+      <div class="shell">
+        <div class="experience__top">
+          <div class="section-heading section-heading--dark" data-reveal>
+            <p class="section-kicker"><span>03</span> The experience</p>
+            <h2 id="experience-title">The things<br>that connect us.</h2>
+          </div>
+          <p class="experience__copy" data-reveal>
+            From the first turn of the key to the last conversation of the
+            evening, RPM is built around a shared experience of the road.
+          </p>
+        </div>
+
+        <ol class="pillars">
+          <li data-reveal>
+            <span class="pillars__number">01</span>
+            <h3>Cars</h3>
+            <p>Every era, every story, and the details that make each car personal.</p>
+          </li>
+          <li data-reveal>
+            <span class="pillars__number">02</span>
+            <h3>Community</h3>
+            <p>Real connections, easy conversation, and a welcoming circle of enthusiasts.</p>
+          </li>
+          <li data-reveal>
+            <span class="pillars__number">03</span>
+            <h3>Driving</h3>
+            <p>Considered routes that turn an ordinary morning into something memorable.</p>
+          </li>
+          <li data-reveal>
+            <span class="pillars__number">04</span>
+            <h3>Experiences</h3>
+            <p>Gatherings shaped with intention, from coffee at dawn to weekends away.</p>
+          </li>
+          <li data-reveal>
+            <span class="pillars__number">05</span>
+            <h3>Southwest Florida</h3>
+            <p>Naples is home. The roads and destinations around it are ours to explore.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="shell">
+        <div class="gallery__heading">
+          <div class="section-heading section-heading--compact" data-reveal>
+            <p class="section-kicker"><span>04</span> From the road</p>
+            <h2 id="gallery-title">Life<br>in motion.</h2>
+          </div>
+          <p data-reveal>
+            A future home for moments from the road, the people who join us,
+            and the details worth stopping for.
+          </p>
+        </div>
+
+        <!-- These local placeholders can be replaced one-for-one with club photography. -->
+        <div class="gallery-grid">
+          <figure class="gallery-card gallery-card--wide" data-reveal>
+            <div class="gallery-card__media">
+              <img
+                src="assets/images/rpm-lifestyle-placeholder.jpg"
+                width="1888"
+                height="833"
+                loading="lazy"
+                decoding="async"
+                alt="Automotive enthusiasts gathering by the water in warm morning light"
+              >
+            </div>
+            <figcaption><span>Morning arrivals</span><span>Naples</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card gallery-card--portrait" data-reveal>
+            <div class="gallery-card__media">
+              <img
+                src="assets/images/rpm-lifestyle-placeholder.jpg"
+                width="1888"
+                height="833"
+                loading="lazy"
+                decoding="async"
+                alt="Performance car detail at a refined coastal gathering"
+              >
+            </div>
+            <figcaption><span>The machines</span><span>Details</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card gallery-card--placeholder" data-reveal>
+            <div class="gallery-card__media" role="img" aria-label="Placeholder for future group drive photography">
+              <span class="gallery-card__index">03</span>
+              <span class="gallery-card__placeholder-label">Photography placeholder</span>
+            </div>
+            <figcaption><span>On the road</span><span>Southwest Florida</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card gallery-card--portrait gallery-card--crop-left" data-reveal>
+            <div class="gallery-card__media">
+              <img
+                src="assets/images/rpm-lifestyle-placeholder.jpg"
+                width="1888"
+                height="833"
+                loading="lazy"
+                decoding="async"
+                alt="Friends in conversation at an early-morning automotive event"
+              >
+            </div>
+            <figcaption><span>Good company</span><span>Community</span></figcaption>
+          </figure>
+
+          <figure class="gallery-card gallery-card--placeholder gallery-card--warm" data-reveal>
+            <div class="gallery-card__media" role="img" aria-label="Placeholder for future sunset drive photography">
+              <span class="gallery-card__index">05</span>
+              <span class="gallery-card__placeholder-label">Photography placeholder</span>
+            </div>
+            <figcaption><span>Last light</span><span>Sunset drive</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="membership" id="membership" aria-labelledby="membership-title">
+      <div class="membership__media" aria-hidden="true">
+        <img
+          src="assets/images/rpm-lifestyle-placeholder.jpg"
+          width="1888"
+          height="833"
+          loading="lazy"
+          decoding="async"
+          alt=""
+        >
+      </div>
+      <div class="membership__veil" aria-hidden="true"></div>
+
+      <div class="shell membership__inner">
+        <div class="membership__copy" data-reveal>
+          <p class="section-kicker"><span>05</span> Membership</p>
+          <h2 id="membership-title">Bring your<br>story to RPM.</h2>
+          <p>
+            Join a community created for people who enjoy the cars, the drive,
+            and everything that happens around them.
+          </p>
+
+          <button
+            class="button button--light"
+            type="button"
+            data-membership-button
+            aria-controls="membership-status"
+            aria-expanded="false"
+          >
+            Join RPM Social Club
+          </button>
+          <p class="membership__status" id="membership-status" role="status" tabindex="-1" hidden>
+            Membership inquiries are opening soon. Check back for the next update.
+          </p>
+        </div>
+
+        <ul class="membership__benefits" data-reveal>
+          <li>Curated events</li>
+          <li>Group drives</li>
+          <li>Automotive community</li>
+          <li>Social gatherings</li>
+          <li>Special experiences</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section instagram" id="instagram" aria-labelledby="instagram-title">
+      <div class="shell instagram__inner">
+        <div data-reveal>
+          <p class="section-kicker"><span>06</span> Follow the journey</p>
+          <h2 id="instagram-title">Instagram</h2>
+        </div>
+
+        <div class="instagram__copy" data-reveal>
+          <p>
+            Event announcements, drive notes, and moments from the community
+            will live here soon.
+          </p>
+          <span class="instagram__placeholder" aria-label="Instagram link coming soon">
+            Instagram link coming soon <span aria-hidden="true">↗</span>
+          </span>
+        </div>
+      </div>
+      <p class="instagram__wordmark" aria-hidden="true">RPM</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="site-footer__top">
+        <a class="brand brand--footer" href="#top" aria-label="RPM Social Club home">
+          <span class="brand__mark">RPM</span>
+          <span class="brand__name">Social Club</span>
+        </a>
+        <p>Naples, Florida<br>For the road ahead.</p>
+      </div>
+
+      <div class="site-footer__grid">
+        <nav aria-label="Footer navigation">
+          <p class="site-footer__label">Explore</p>
+          <a href="#about">About</a>
+          <a href="#events">Events</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#membership">Membership</a>
+        </nav>
 
         <div>
-          <div class="event-name">
-            Cars & Coffee
-          </div>
-
-          <div class="event-location">
-            Naples, Florida
-          </div>
+          <p class="site-footer__label">Social</p>
+          <span>Instagram — coming soon</span>
         </div>
 
-        <div class="event-arrow">
-          →
+        <div class="site-footer__legal">
+          <p>© <span data-year></span> RPM Social Club</p>
+          <p>Naples · Southwest Florida</p>
         </div>
-
       </div>
-
-
-      <div class="event">
-
-        <div class="event-date">
-          COMING SOON
-        </div>
-
-        <div>
-          <div class="event-name">
-            Sunset Drive
-          </div>
-
-          <div class="event-location">
-            Southwest Florida
-          </div>
-        </div>
-
-        <div class="event-arrow">
-          →
-        </div>
-
-      </div>
-
-
-      <div class="event">
-
-        <div class="event-date">
-          COMING SOON
-        </div>
-
-        <div>
-          <div class="event-name">
-            RPM Social
-          </div>
-
-          <div class="event-location">
-            Naples, Florida
-          </div>
-        </div>
-
-        <div class="event-arrow">
-          →
-        </div>
-
-      </div>
-
     </div>
-
-  </div>
-
-</section>
-
-
-<section class="community" id="community">
-
-  <div class="container">
-
-    <div class="section-label">
-      RPM Social Club
-    </div>
-
-    <h2>
-      Built for people who love cars.
-    </h2>
-
-    <p>
-      Be part of a community built around great cars,
-      great people and great experiences.
-    </p>
-
-    <a href="#" class="button button-primary">
-      Join RPM Social Club
-    </a>
-
-  </div>
-
-</section>
-
-
-<footer>
-
-  <div class="container footer-inner">
-
-    <div class="footer-logo">
-      RPM SOCIAL CLUB
-    </div>
-
-    <div>
-      Naples, Florida
-    </div>
-
-    <div>
-      © <span id="year"></span> RPM Social Club
-    </div>
-
-  </div>
-
-</footer>
-
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+  </footer>
 </body>
 </html>
