@@ -176,24 +176,13 @@ ul {
   display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
-  gap: 0.75rem;
   line-height: 1;
 }
 
-.brand__mark {
-  font-size: 1.3rem;
-  font-weight: 800;
-  letter-spacing: -0.06em;
-}
-
-.brand__name {
-  padding-left: 0.75rem;
-  border-left: 1px solid currentColor;
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.19em;
-  line-height: 1.15;
-  text-transform: uppercase;
+.brand__logo {
+  width: auto;
+  height: 3.85rem;
+  object-fit: contain;
 }
 
 .nav__menu {
@@ -1635,12 +1624,8 @@ ul {
   padding-bottom: 4rem;
 }
 
-.brand--footer .brand__mark {
-  font-size: clamp(2rem, 4vw, 4rem);
-}
-
-.brand--footer .brand__name {
-  font-size: 0.7rem;
+.brand--footer .brand__logo {
+  height: clamp(7.5rem, 11vw, 9.5rem);
 }
 
 .site-footer__top > p {
@@ -2028,6 +2013,14 @@ ul {
 }
 
 @media (max-width: 700px) {
+  .brand__logo {
+    height: 3.15rem;
+  }
+
+  .brand--footer .brand__logo {
+    height: 7rem;
+  }
+
   :root {
     --section-space: 6rem;
   }
