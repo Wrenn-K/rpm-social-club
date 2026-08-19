@@ -147,19 +147,27 @@ ul {
   position: fixed;
   inset: 0 0 auto;
   z-index: 100;
+  background: transparent;
   color: var(--white);
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.28);
   transition:
     background-color 350ms ease,
     border-color 350ms ease,
     backdrop-filter 350ms ease;
 }
 
-.site-header.is-scrolled,
-.site-header:has(.nav__menu.is-open) {
+.site-header.is-scrolled {
   border-bottom: 1px solid var(--line);
-  background: rgba(10, 11, 10, 0.88);
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
+  background: rgba(10, 11, 10, 0.72);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+.site-header:has(.nav__menu.is-open) {
+  border-bottom-color: transparent;
+  background: rgba(10, 11, 10, 0.86);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
 }
 
 .nav {
@@ -181,8 +189,9 @@ ul {
 
 .brand__logo {
   width: auto;
-  height: 3.85rem;
+  height: 4.75rem;
   object-fit: contain;
+  filter: drop-shadow(0 1px 12px rgba(0, 0, 0, 0.28));
 }
 
 .nav__menu {
@@ -1611,8 +1620,10 @@ ul {
 }
 
 .site-footer {
+  position: relative;
   padding-block: clamp(4rem, 8vw, 7rem) 2rem;
-  background: var(--ink);
+  border-top: 1px solid rgba(246, 242, 233, 0.08);
+  background: transparent;
 }
 
 .site-footer__top {
@@ -1625,7 +1636,7 @@ ul {
 }
 
 .brand--footer .brand__logo {
-  height: clamp(7.5rem, 11vw, 9.5rem);
+  height: clamp(8.5rem, 12vw, 11rem);
 }
 
 .site-footer__top > p {
@@ -1816,6 +1827,10 @@ ul {
 @media (max-width: 1180px) {
   :root {
     --gutter: clamp(1.2rem, 4vw, 2.5rem);
+  }
+
+  .brand__logo {
+    height: 4.15rem;
   }
 
   .nav {
@@ -2014,11 +2029,11 @@ ul {
 
 @media (max-width: 700px) {
   .brand__logo {
-    height: 3.15rem;
+    height: 3.65rem;
   }
 
   .brand--footer .brand__logo {
-    height: 7rem;
+    height: 8rem;
   }
 
   :root {
@@ -2333,33 +2348,7 @@ ul {
 
 .page-hero--merch {
   min-height: 78svh;
-  background: var(--green);
-}
-
-.page-hero--merch::before {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(1, 35, 22, 0.9), rgba(1, 50, 32, 0.52)),
-    radial-gradient(circle at 75% 30%, rgba(200, 173, 131, 0.16), transparent 33%);
-  content: "";
-}
-
-.page-hero__merch-mark {
-  position: absolute;
-  right: -0.06em;
-  bottom: -0.28em;
-  color: rgba(246, 242, 233, 0.055);
-  font-size: clamp(18rem, 40vw, 38rem);
-  font-weight: 800;
-  letter-spacing: -0.11em;
-  line-height: 1;
-  pointer-events: none;
-}
-
-.page-hero--merch .page-hero__inner {
-  position: relative;
-  z-index: 1;
+  background: var(--ink);
 }
 
 .page-cta {
@@ -3042,6 +3031,19 @@ ul {
 
   .page-hero__media img {
     object-position: 62% center;
+  }
+
+  .page-hero--events .page-hero__media img {
+    object-position: 67% center;
+  }
+
+  .page-hero--membership .page-hero__media img {
+    object-position: 72% center;
+  }
+
+  .page-hero--experiences .page-hero__media img,
+  .page-hero--merch .page-hero__media img {
+    object-position: 74% center;
   }
 
   .page-hero h1 {
