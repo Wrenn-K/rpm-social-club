@@ -18,22 +18,15 @@
   <meta property="og:description" content="A premium automotive social club and lifestyle destination taking shape in Naples, Florida.">
   <meta property="og:url" content="https://rpmsocialclub.com/">
   <meta property="og:image" content="https://rpmsocialclub.com/assets/images/rpm-lifestyle-placeholder.jpg">
-  <meta property="og:image:width" content="1888">
-  <meta property="og:image:height" content="833">
   <meta property="og:image:alt" content="An early-morning automotive gathering in Naples, Florida">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="RPM Social Club | Coffee. Cars. Community.">
-  <meta name="twitter:description" content="A premium automotive social club and lifestyle destination taking shape in Naples, Florida.">
-  <meta name="twitter:image" content="https://rpmsocialclub.com/assets/images/rpm-lifestyle-placeholder.jpg">
+  <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
 
-  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/main.js" defer></script>
 
   <script type="application/ld+json">
     {
@@ -41,9 +34,7 @@
       "@type": "Organization",
       "name": "RPM Social Club",
       "url": "https://rpmsocialclub.com/",
-      "sameAs": [
-        "https://www.instagram.com/rpmsocialclub/"
-      ],
+      "sameAs": ["https://www.instagram.com/rpmsocialclub/"],
       "description": "A premium automotive social club and lifestyle destination in development in Naples, Florida.",
       "areaServed": "Naples, Florida"
     }
@@ -55,7 +46,7 @@
 
   <header class="site-header" data-header>
     <div class="shell nav">
-      <a class="brand" href="#top" aria-label="RPM Social Club home">
+      <a class="brand" href="/" aria-label="RPM Social Club home">
         <span class="brand__mark">RPM</span>
         <span class="brand__name">Social Club</span>
       </a>
@@ -67,29 +58,28 @@
       </button>
 
       <nav class="nav__menu" id="site-navigation" aria-label="Primary navigation">
-        <a href="#top">Home</a>
-        <a href="#club">The Club</a>
-        <a href="#events">Events</a>
-        <a href="#membership">Membership</a>
-        <a href="#experiences">Experiences</a>
-        <a href="#merchandise">Merchandise</a>
+        <a href="/" aria-current="page">Home</a>
+        <a href="/club/">The Club</a>
+        <a href="/events/">Events</a>
+        <a href="/membership/">Membership</a>
+        <a href="/experiences/">Experiences</a>
+        <a href="/merchandise/">Merchandise</a>
         <a
-          class="nav__social"
           href="https://www.instagram.com/rpmsocialclub/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="RPM Social Club on Instagram (opens in a new tab)"
         >Instagram</a>
-        <button class="nav__cta" type="button" data-dialog-mode="membership">Join the Club</button>
+        <a class="nav__cta" href="/contact/">Contact / Join</a>
       </nav>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="hero" id="top" aria-labelledby="hero-title">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero__media" aria-hidden="true">
         <img
-          src="assets/images/rpm-lifestyle-placeholder.jpg"
+          src="/assets/images/rpm-lifestyle-placeholder.jpg"
           width="1888"
           height="833"
           alt=""
@@ -109,8 +99,8 @@
             conversation, hospitality, and shared experiences.
           </p>
           <div class="hero__actions">
-            <button class="button button--light" type="button" data-dialog-mode="membership">Join the Club</button>
-            <a class="text-link text-link--light" href="#club">
+            <a class="button button--light" href="/contact/">Join the Club</a>
+            <a class="text-link text-link--light" href="/club/">
               Explore the Club <span aria-hidden="true">↘</span>
             </a>
           </div>
@@ -125,7 +115,7 @@
         </div>
       </div>
 
-      <a class="hero__scroll" href="#club" aria-label="Explore RPM Social Club">
+      <a class="hero__scroll" href="#introduction" aria-label="Learn about RPM Social Club">
         <span>Discover</span>
         <span class="hero__scroll-line" aria-hidden="true"></span>
       </a>
@@ -139,465 +129,142 @@
       </div>
     </div>
 
-    <section class="section club-intro" id="club" aria-labelledby="club-title">
-      <div class="shell">
-        <div class="section-heading" data-reveal>
-          <p class="section-kicker"><span>01</span> The club</p>
-          <h2 id="club-title">A place built for<br>more than the drive.</h2>
-        </div>
-
-        <div class="editorial-grid">
-          <p class="editorial-grid__lead" data-reveal>
-            RPM Social brings automotive culture and thoughtful hospitality
-            together under one roof.
-          </p>
-          <div class="editorial-grid__body" data-reveal>
-            <p>
-              The vision is a place where enthusiasts can arrive in something
-              they love, settle in over coffee, watch a major event, challenge
-              a friend on the simulators, or simply spend an unhurried afternoon
-              in good company.
-            </p>
-            <p>
-              Cars are the common language, not the admission test. RPM is being
-              shaped to feel just as welcoming to the curious passenger, the
-              coffee regular, and the lifelong enthusiast.
-            </p>
-          </div>
-        </div>
-
-        <ul class="club-principles" aria-label="RPM Social Club experiences">
-          <li data-reveal><span>01</span>Automotive culture</li>
-          <li data-reveal><span>02</span>Premium lounge</li>
-          <li data-reveal><span>03</span>Coffee &amp; wine</li>
-          <li data-reveal><span>04</span>Simulators</li>
-          <li data-reveal><span>05</span>Events</li>
-          <li data-reveal><span>06</span>Journeys</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section inside" id="inside" aria-labelledby="inside-title">
-      <div class="shell">
-        <div class="split-heading">
-          <div class="section-heading section-heading--dark" data-reveal>
-            <p class="section-kicker"><span>02</span> Inside RPM Social</p>
-            <h2 id="inside-title">Designed around<br>how people gather.</h2>
-          </div>
-          <p data-reveal>
-            The club is planned as a sequence of warm, connected spaces—each
-            distinct in purpose, all part of one relaxed experience.
-          </p>
-        </div>
-
-        <figure class="inside__image" data-reveal>
-          <img
-            src="assets/images/rpm-club-lounge-placeholder.jpg"
-            width="1823"
-            height="863"
-            loading="lazy"
-            decoding="async"
-            alt="Concept placeholder showing a warm automotive lounge with a coffee bar, social seating, featured vehicle, and simulator room"
-          >
-          <figcaption>
-            <span>Atmosphere study</span>
-            <span>Concept imagery · Final space may differ</span>
-          </figcaption>
-        </figure>
-
-        <ol class="space-grid">
-          <li data-reveal>
-            <span class="space-grid__number">01</span>
-            <h3>Reception &amp; Entry</h3>
-            <p>A calm arrival, a clear welcome, and room for a remarkable car to set the tone.</p>
-          </li>
-          <li data-reveal>
-            <span class="space-grid__number">02</span>
-            <h3>Coffee &amp; Wine Bar</h3>
-            <p>The social center of the club, designed for morning coffee and easy evening conversation.</p>
-          </li>
-          <li data-reveal>
-            <span class="space-grid__number">03</span>
-            <h3>Main Lounge</h3>
-            <p>Comfortable seating for members, informal meetings, viewing events, and time well spent.</p>
-          </li>
-          <li data-reveal>
-            <span class="space-grid__number">04</span>
-            <h3>Simulator Room</h3>
-            <p>A dedicated setting for casual sessions, friendly challenges, and race-weekend energy.</p>
-          </li>
-          <li data-reveal>
-            <span class="space-grid__number">05</span>
-            <h3>Private Events</h3>
-            <p>A flexible hospitality environment for companies, private groups, watch parties, and celebrations.</p>
-          </li>
-          <li data-reveal>
-            <span class="space-grid__number">06</span>
-            <h3>RPM Collection</h3>
-            <p>A considered retail edit of apparel, drinkware, accessories, and limited seasonal drops.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section club-life" aria-labelledby="club-life-title">
-      <div class="shell">
+    <section class="section home-intro" id="introduction" aria-labelledby="intro-title">
+      <div class="shell home-intro__grid">
         <div class="section-heading section-heading--compact" data-reveal>
-          <p class="section-kicker"><span>03</span> Club life</p>
-          <h2 id="club-life-title">Come for the cars.<br>Stay for the atmosphere.</h2>
+          <p class="section-kicker"><span>01</span> Naples, Florida</p>
+          <h2 id="intro-title">More than a place to park.</h2>
         </div>
-
-        <div class="feature-pair">
-          <article class="feature-story feature-story--coffee" data-reveal>
-            <div class="feature-story__media">
-              <img
-                src="assets/images/rpm-club-lounge-placeholder.jpg"
-                width="1823"
-                height="863"
-                loading="lazy"
-                decoding="async"
-                alt="Concept placeholder of the RPM Social coffee and wine bar"
-              >
-            </div>
-            <div class="feature-story__copy">
-              <p class="card-label">Coffee &amp; Wine</p>
-              <h3>A space that moves with the day.</h3>
-              <p>
-                Premium coffee gives mornings their rhythm. Later, wine and a
-                relaxed lounge atmosphere make room for conversation—always
-                with automotive culture in the background, never at the expense
-                of good hospitality.
-              </p>
-            </div>
-          </article>
-
-          <article class="feature-story feature-story--vehicle" data-reveal>
-            <div class="feature-story__media">
-              <img
-                src="assets/images/rpm-club-lounge-placeholder.jpg"
-                width="1823"
-                height="863"
-                loading="lazy"
-                decoding="async"
-                alt="Concept placeholder of an enthusiast vehicle displayed inside RPM Social"
-              >
-            </div>
-            <div class="feature-story__copy">
-              <p class="card-label">Featured at RPM</p>
-              <h3>One car. A different story every time.</h3>
-              <p>
-                The club concept includes a rotating vehicle display—a chance
-                to spend time with select member, collector, or enthusiast cars
-                and appreciate what makes each one worth sharing.
-              </p>
-              <span class="quiet-badge">Showcase concept · Coming soon</span>
-            </div>
-          </article>
+        <div class="home-intro__copy" data-reveal>
+          <p>
+            RPM Social brings automotive culture and thoughtful hospitality
+            together under one roof—a welcoming place to meet, drive, watch,
+            compete, and spend time in good company.
+          </p>
+          <a class="text-link text-link--light" href="/club/">Read our story <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
-    <section class="section simulator" id="simulators" aria-labelledby="simulator-title">
-      <div class="shell simulator__grid">
-        <div class="simulator__copy" data-reveal>
-          <p class="section-kicker"><span>04</span> Simulator experience</p>
-          <h2 id="simulator-title">Close racing.<br>No pit wall required.</h2>
-          <p>
-            Premium simulator experiences are planned as part of club life:
-            approachable enough for a first session, competitive enough to
-            keep the leaderboard interesting.
-          </p>
-          <span class="quiet-badge quiet-badge--light">Experience in development</span>
-        </div>
-
-        <div class="simulator__visual" data-reveal>
+    <section class="section home-teaser home-teaser--paper" aria-labelledby="club-teaser-title">
+      <div class="shell home-teaser__grid">
+        <div class="home-teaser__media" data-reveal>
           <img
-            src="assets/images/rpm-club-lounge-placeholder.jpg"
+            src="/assets/images/rpm-club-lounge-placeholder.jpg"
             width="1823"
             height="863"
             loading="lazy"
             decoding="async"
-            alt="Concept placeholder showing simulators through the glass of the RPM Social lounge"
+            alt="Concept placeholder of the RPM Social automotive lounge and coffee bar"
           >
-          <div class="simulator__overlay" aria-hidden="true">
-            <span>RPM</span>
-            <small>SIM / 01</small>
-          </div>
+          <span>Concept imagery · Final space may differ</span>
         </div>
-
-        <ul class="simulator__formats" data-reveal>
-          <li><span>01</span>Casual sessions</li>
-          <li><span>02</span>Member challenges</li>
-          <li><span>03</span>Group events</li>
-          <li><span>04</span>Race-weekend competitions</li>
-          <li><span>05</span>Club leaderboards</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section events" id="events" aria-labelledby="events-title">
-      <div class="shell">
-        <div class="split-heading">
-          <div class="section-heading" data-reveal>
-            <p class="section-kicker"><span>05</span> Events at RPM</p>
-            <h2 id="events-title">There is always<br>a reason to gather.</h2>
-          </div>
-          <div class="split-heading__copy" data-reveal>
-            <p>
-              The calendar will move beyond car meets—mixing automotive
-              culture, major viewing moments, member gatherings, and private
-              hospitality.
-            </p>
-            <span class="quiet-badge quiet-badge--light">Dates coming soon</span>
-          </div>
-        </div>
-
-        <div class="event-grid">
-          <article data-reveal>
-            <p class="event-grid__status">Coming Soon</p>
-            <span class="event-grid__number">01</span>
-            <h3>Cars &amp; Coffee</h3>
-            <p>Morning gatherings centered on interesting cars, excellent coffee, and easy conversation.</p>
-          </article>
-          <article data-reveal>
-            <p class="event-grid__status">Coming Soon</p>
-            <span class="event-grid__number">02</span>
-            <h3>Race Watch Parties</h3>
-            <p>Shared viewing for major motorsport moments, with the atmosphere of the club around them.</p>
-          </article>
-          <article data-reveal>
-            <p class="event-grid__status">Coming Soon</p>
-            <span class="event-grid__number">03</span>
-            <h3>Trivia &amp; Social Nights</h3>
-            <p>Low-pressure evenings designed around conversation, teams, and a good reason to stay awhile.</p>
-          </article>
-          <article data-reveal>
-            <p class="event-grid__status">Coming Soon</p>
-            <span class="event-grid__number">04</span>
-            <h3>Sports Watch Events</h3>
-            <p>World Cup, championship games, finals, and other major viewing events beyond motorsport.</p>
-          </article>
-          <article data-reveal>
-            <p class="event-grid__status">Coming Soon</p>
-            <span class="event-grid__number">05</span>
-            <h3>Member &amp; Community Events</h3>
-            <p>Members-focused experiences alongside welcoming gatherings for the wider Naples community.</p>
-          </article>
-          <article data-reveal>
-            <p class="event-grid__status">Future Inquiries</p>
-            <span class="event-grid__number">06</span>
-            <h3>Private Events</h3>
-            <p>A future setting for company gatherings, private groups, celebrations, and tailored watch parties.</p>
-            <button class="text-button" type="button" data-dialog-mode="event">Plan an event <span aria-hidden="true">↗</span></button>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section membership" id="membership" aria-labelledby="membership-title">
-      <div class="shell">
-        <div class="membership__heading">
-          <div class="section-heading section-heading--dark" data-reveal>
-            <p class="section-kicker"><span>06</span> Membership</p>
-            <h2 id="membership-title">Choose how<br>you belong.</h2>
-          </div>
-          <div data-reveal>
-            <p>
-              Three levels are being developed to support different ways of
-              using the club. Final benefits, access, and membership details
-              will be announced before enrollment opens.
-            </p>
-            <span class="quiet-badge quiet-badge--dark">No pricing published yet</span>
-          </div>
-        </div>
-
-        <div class="tier-grid">
-          <article class="tier-card" data-reveal>
-            <header>
-              <p>Entry membership</p>
-              <span>01</span>
-            </header>
-            <h3>Touring</h3>
-            <p class="tier-card__note">Potential benefits may include:</p>
-            <ul>
-              <li>Member and lounge access</li>
-              <li>Members-only hours</li>
-              <li>Selected event access</li>
-              <li>Member community</li>
-              <li>Club communications</li>
-            </ul>
-            <button class="tier-card__button" type="button" data-dialog-mode="membership">Membership details</button>
-          </article>
-
-          <article class="tier-card tier-card--gt" data-reveal>
-            <header>
-              <p>Enhanced membership</p>
-              <span>02</span>
-            </header>
-            <h3>Grand Touring</h3>
-            <p class="tier-card__note">Potential benefits may include:</p>
-            <ul>
-              <li>Expanded club access</li>
-              <li>Preferred event access</li>
-              <li>Eligible lounge benefits</li>
-              <li>Eligible merchandise benefits</li>
-              <li>Coffee, wine, and simulator benefits</li>
-              <li>Additional member experiences</li>
-            </ul>
-            <button class="tier-card__button" type="button" data-dialog-mode="membership">Membership details</button>
-          </article>
-
-          <article class="tier-card tier-card--vip" data-reveal>
-            <header>
-              <p>Highest membership</p>
-              <span>03</span>
-            </header>
-            <h3>VIP</h3>
-            <p class="tier-card__note">Potential benefits may include:</p>
-            <ul>
-              <li>Priority and special access</li>
-              <li>Premium lounge privileges</li>
-              <li>Enhanced simulator benefits</li>
-              <li>Merchandise and hospitality benefits</li>
-              <li>Special experiences</li>
-              <li>Priority event access</li>
-              <li>Curated travel opportunities</li>
-            </ul>
-            <button class="tier-card__button" type="button" data-dialog-mode="membership">Membership details</button>
-          </article>
-        </div>
-
-        <p class="membership__disclaimer" data-reveal>
-          Benefits shown are directional and remain subject to final membership terms.
-          No partner services or exact discounts are being promised at this stage.
-        </p>
-      </div>
-    </section>
-
-    <section class="section journeys" id="experiences" aria-labelledby="journeys-title">
-      <div class="shell">
-        <div class="journeys__layout">
-          <div class="journeys__intro" data-reveal>
-            <p class="section-kicker"><span>07</span> Beyond the club</p>
-            <h2 id="journeys-title">Drives &amp;<br>destinations.</h2>
-            <p>
-              RPM Social is building toward curated journeys that bring the
-              community together on memorable roads and at meaningful
-              automotive destinations.
-            </p>
-            <span class="quiet-badge quiet-badge--light">Aspirational concepts · Nothing scheduled</span>
-          </div>
-
-          <div class="journey-list">
-            <article data-reveal>
-              <span>01 / Great roads</span>
-              <h3>Mountain routes</h3>
-              <p>Tail of the Dragon · Smoky Mountains · Blue Ridge Parkway</p>
-            </article>
-            <article data-reveal>
-              <span>02 / Race weekends</span>
-              <h3>Destination events</h3>
-              <p>Miami Formula 1 Grand Prix · Daytona Rolex 24 · Sebring 12 Hours</p>
-            </article>
-            <article data-reveal>
-              <span>03 / Automotive culture</span>
-              <h3>Immersive experiences</h3>
-              <p>Porsche Experience Center · Nürburgring · Monterey Car Week</p>
-            </article>
-            <article data-reveal>
-              <span>04 / Europe</span>
-              <h3>Grand touring</h3>
-              <p>Italy · Switzerland · Germany · Broader European routes</p>
-            </article>
-          </div>
-        </div>
-
-        <p class="journeys__disclaimer" data-reveal>
-          These are examples of future experiences RPM Social may build toward.
-          No trip is currently scheduled, and no affiliation or partnership with
-          the named destinations, venues, events, or organizations is implied.
-        </p>
-      </div>
-    </section>
-
-    <section class="section merchandise" id="merchandise" aria-labelledby="merchandise-title">
-      <div class="shell">
-        <div class="split-heading">
-          <div class="section-heading section-heading--dark" data-reveal>
-            <p class="section-kicker"><span>08</span> RPM Collection</p>
-            <h2 id="merchandise-title">Made for life<br>beyond the club.</h2>
-          </div>
-          <div class="split-heading__copy" data-reveal>
-            <p>
-              A future collection of useful, wearable pieces shaped by the same
-              understated automotive point of view as the club itself.
-            </p>
-            <span class="quiet-badge quiet-badge--dark">Limited drops · Coming soon</span>
-          </div>
-        </div>
-
-        <div class="collection-grid">
-          <article data-reveal>
-            <div class="collection-grid__visual" role="img" aria-label="Placeholder for RPM Social apparel photography">
-              <span>RPM / 01</span>
-              <strong>Wear</strong>
-            </div>
-            <p class="card-label">Apparel</p>
-            <h3>Everyday layers</h3>
-            <p>Premium tees, hoodies, crewnecks, quarter zips, polos, windbreakers, and hats for men and women.</p>
-          </article>
-          <article data-reveal>
-            <div class="collection-grid__visual" role="img" aria-label="Placeholder for RPM Social automotive artwork photography">
-              <span>RPM / 02</span>
-              <strong>Drive</strong>
-            </div>
-            <p class="card-label">Automotive designs</p>
-            <h3>Original enthusiast artwork</h3>
-            <p>RPM-led designs inspired by automotive forms and stories, without unlicensed manufacturer branding.</p>
-          </article>
-          <article data-reveal>
-            <div class="collection-grid__visual" role="img" aria-label="Placeholder for RPM Social drinkware photography">
-              <span>RPM / 03</span>
-              <strong>Gather</strong>
-            </div>
-            <p class="card-label">Coffee &amp; Wine</p>
-            <h3>For the bar and the road</h3>
-            <p>Mugs, tumblers, water bottles, wine glasses, corkscrews, and coolers developed around club life.</p>
-          </article>
-          <article data-reveal>
-            <div class="collection-grid__visual" role="img" aria-label="Placeholder for RPM Social accessories photography">
-              <span>RPM / 04</span>
-              <strong>Keep</strong>
-            </div>
-            <p class="card-label">Accessories &amp; drops</p>
-            <h3>Small things, limited runs</h3>
-            <p>Coasters, stickers, keychains, and original seasonal collections released in considered quantities.</p>
-          </article>
-        </div>
-
-        <div class="seasonal-strip" data-reveal>
-          <p class="card-label">Seasonal drops</p>
+        <div class="home-teaser__copy" data-reveal>
+          <p class="section-kicker"><span>02</span> The club</p>
+          <h2 id="club-teaser-title">Automotive culture meets hospitality.</h2>
           <p>
-            New Year · St. Patrick’s Day · Summer · Fourth of July · Labor Day ·
-            Halloween · Thanksgiving · Christmas
+            Coffee and wine, a relaxed main lounge, premium simulators, a
+            rotating featured vehicle, events, and a considered RPM collection.
           </p>
-          <span>
-            Original RPM artwork only. Event-inspired concepts remain subject
-            to final artwork and licensing review.
-          </span>
+          <a class="button button--green" href="/club/">Explore the Club</a>
         </div>
-
-        <p class="collection-note" data-reveal>
-          Product imagery, inventory, artwork, and pricing will be added when
-          the RPM Collection is finalized.
-        </p>
       </div>
     </section>
 
-    <section class="section social" id="instagram" aria-labelledby="social-title">
+    <section class="section home-events" aria-labelledby="events-teaser-title">
+      <div class="shell">
+        <div class="home-section-heading">
+          <div class="section-heading section-heading--compact" data-reveal>
+            <p class="section-kicker"><span>03</span> Gather at RPM</p>
+            <h2 id="events-teaser-title">Reasons to come together.</h2>
+          </div>
+          <a class="text-link text-link--light" href="/events/" data-reveal>View events <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="home-card-grid">
+          <article data-reveal>
+            <span>Coming Soon</span>
+            <h3>Cars &amp; Coffee</h3>
+            <p>Morning gatherings built around interesting cars, excellent coffee, and easy conversation.</p>
+          </article>
+          <article data-reveal>
+            <span>Coming Soon</span>
+            <h3>Watch Parties</h3>
+            <p>Major motorsport and sporting moments shared from the comfort of the club.</p>
+          </article>
+          <article data-reveal>
+            <span>Coming Soon</span>
+            <h3>Member Socials</h3>
+            <p>Member gatherings, trivia, community events, and private hospitality experiences.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-membership" aria-labelledby="membership-teaser-title">
+      <div class="shell home-membership__grid">
+        <div data-reveal>
+          <p class="section-kicker"><span>04</span> Membership</p>
+          <h2 id="membership-teaser-title">Choose how you belong.</h2>
+        </div>
+        <div class="home-membership__copy" data-reveal>
+          <p>
+            Touring, Grand Touring, and VIP membership concepts are being
+            developed around access, events, hospitality, simulators, and
+            experiences.
+          </p>
+          <span class="quiet-badge quiet-badge--light">Details coming soon</span>
+          <a class="button button--light" href="/membership/">Explore membership</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-teaser" aria-labelledby="experiences-teaser-title">
+      <div class="shell home-teaser__grid home-teaser__grid--reverse">
+        <div class="home-teaser__media" data-reveal>
+          <img
+            src="/assets/images/rpm-lifestyle-placeholder.jpg"
+            width="1888"
+            height="833"
+            loading="lazy"
+            decoding="async"
+            alt="Automotive enthusiasts gathering before a shared drive"
+          >
+        </div>
+        <div class="home-teaser__copy" data-reveal>
+          <p class="section-kicker"><span>05</span> Beyond the club</p>
+          <h2 id="experiences-teaser-title">Roads worth remembering.</h2>
+          <p>
+            Future drives and destination experiences shaped around great
+            routes, automotive culture, and the people you share them with.
+          </p>
+          <a class="button button--green" href="/experiences/">Discover experiences</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-collection" aria-labelledby="collection-teaser-title">
+      <div class="shell home-collection__grid">
+        <div class="home-collection__visual" role="img" aria-label="Placeholder for the future RPM Social merchandise collection" data-reveal>
+          <span>RPM / COLLECTION</span>
+          <strong>Wear the drive.</strong>
+        </div>
+        <div class="home-teaser__copy" data-reveal>
+          <p class="section-kicker"><span>06</span> RPM Collection</p>
+          <h2 id="collection-teaser-title">Made for life beyond the club.</h2>
+          <p>
+            Understated apparel, original automotive artwork, drinkware, and
+            limited seasonal releases—without fake inventory or premature pricing.
+          </p>
+          <a class="button button--green" href="/merchandise/">Explore the collection</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section social" aria-labelledby="social-title">
       <div class="shell social__inner">
         <div data-reveal>
-          <p class="section-kicker"><span>09</span> Follow the drive</p>
+          <p class="section-kicker"><span>07</span> Follow the drive</p>
           <h2 id="social-title">@rpmsocialclub</h2>
         </div>
         <div class="social__copy" data-reveal>
@@ -619,31 +286,12 @@
       </div>
       <p class="social__watermark" aria-hidden="true">RPM</p>
     </section>
-
-    <section class="closing" aria-labelledby="closing-title">
-      <div class="shell closing__inner">
-        <div data-reveal>
-          <p class="eyebrow"><span>Naples, Florida</span> The road starts here</p>
-          <h2 id="closing-title">Drive. Connect.<br><em>Belong.</em></h2>
-        </div>
-        <div class="closing__actions" data-reveal>
-          <p>Membership details and the first event announcements are coming soon.</p>
-          <button class="button button--green" type="button" data-dialog-mode="membership">Become a member</button>
-          <a
-            class="text-link text-link--light"
-            href="https://www.instagram.com/rpmsocialclub/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Follow RPM Social <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
     <div class="shell">
       <div class="site-footer__top">
-        <a class="brand brand--footer" href="#top" aria-label="RPM Social Club home">
+        <a class="brand brand--footer" href="/" aria-label="RPM Social Club home">
           <span class="brand__mark">RPM</span>
           <span class="brand__name">Social Club</span>
         </a>
@@ -653,11 +301,12 @@
       <div class="site-footer__grid">
         <nav aria-label="Footer navigation">
           <p class="site-footer__label">Explore</p>
-          <a href="#club">The Club</a>
-          <a href="#events">Events</a>
-          <a href="#membership">Membership</a>
-          <a href="#experiences">Experiences</a>
-          <a href="#merchandise">Merchandise</a>
+          <a href="/club/">The Club</a>
+          <a href="/events/">Events</a>
+          <a href="/membership/">Membership</a>
+          <a href="/experiences/">Experiences</a>
+          <a href="/merchandise/">Merchandise</a>
+          <a href="/contact/">Contact / Join</a>
         </nav>
 
         <div>
@@ -680,26 +329,5 @@
       </div>
     </div>
   </footer>
-
-  <dialog class="interest-dialog" id="interest-dialog" aria-labelledby="dialog-title">
-    <div class="interest-dialog__inner">
-      <button class="interest-dialog__close" type="button" data-dialog-close aria-label="Close dialog">×</button>
-      <p class="section-kicker"><span>RPM</span> <span data-dialog-kicker>Membership</span></p>
-      <h2 id="dialog-title" data-dialog-title>Membership details are coming soon.</h2>
-      <p data-dialog-copy>
-        Touring, Grand Touring, and VIP membership frameworks are still being
-        finalized. Follow RPM Social on Instagram for enrollment updates.
-      </p>
-      <div class="interest-dialog__actions">
-        <a
-          class="button button--green"
-          href="https://www.instagram.com/rpmsocialclub/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Follow @rpmsocialclub</a>
-        <button class="text-button" type="button" data-dialog-close>Close</button>
-      </div>
-    </div>
-  </dialog>
 </body>
 </html>

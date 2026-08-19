@@ -19,7 +19,13 @@ function setNavigation(open, returnFocus = false) {
   document.body.classList.toggle("nav-open", open);
 
   if (open) {
-    navItems[0]?.focus();
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (navToggle.getAttribute("aria-expanded") === "true") {
+          navItems[0]?.focus();
+        }
+      });
+    });
   } else if (returnFocus) {
     navToggle.focus();
   }
@@ -96,74 +102,29 @@ document.querySelectorAll("[data-year]").forEach((element) => {
   element.textContent = new Date().getFullYear();
 });
 
-const dialog = document.querySelector("#interest-dialog");
-const dialogTriggers = document.querySelectorAll("[data-dialog-mode]");
-const dialogCloseButtons = dialog?.querySelectorAll("[data-dialog-close]") ?? [];
-const dialogKicker = dialog?.querySelector("[data-dialog-kicker]");
-const dialogTitle = dialog?.querySelector("[data-dialog-title]");
-const dialogCopy = dialog?.querySelector("[data-dialog-copy]");
-let dialogReturnFocus = null;
+const contactForm = document.querySelector("[data-contact-form]");
+const inquiryType = document.querySelector("[data-inquiry-type]");
+const formStatus = document.querySelector("[data-form-status]");
 
-const dialogContent = {
-  membership: {
-    kicker: "Membership",
-    title: "Membership details are coming soon.",
-    copy: "Touring, Grand Touring, and VIP membership frameworks are still being finalized. Follow RPM Social on Instagram for enrollment updates.",
-  },
-  event: {
-    kicker: "Private events",
-    title: "Event inquiries will open soon.",
-    copy: "The private-event experience and inquiry process are still in development. Follow RPM Social on Instagram as the space and event calendar take shape.",
-  },
-};
+if (inquiryType) {
+  const requestedInquiry = new URLSearchParams(window.location.search).get("inquiry");
+  const validOptions = [...inquiryType.options].map((option) => option.value);
 
-function openDialog(mode, trigger) {
-  if (!dialog) return;
-
-  const content = dialogContent[mode] ?? dialogContent.membership;
-  if (dialogKicker) dialogKicker.textContent = content.kicker;
-  if (dialogTitle) dialogTitle.textContent = content.title;
-  if (dialogCopy) dialogCopy.textContent = content.copy;
-
-  dialogReturnFocus = trigger;
-  document.body.classList.add("dialog-open");
-
-  if (typeof dialog.showModal === "function") {
-    dialog.showModal();
-  } else {
-    dialog.setAttribute("open", "");
+  if (requestedInquiry && validOptions.includes(requestedInquiry)) {
+    inquiryType.value = requestedInquiry;
   }
 }
 
-function closeDialog() {
-  if (!dialog) return;
+contactForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-  if (typeof dialog.close === "function") {
-    dialog.close();
-  } else {
-    dialog.removeAttribute("open");
+  if (!contactForm.checkValidity()) {
+    contactForm.reportValidity();
+    return;
   }
-}
 
-dialogTriggers.forEach((trigger) => {
-  trigger.addEventListener("click", () => {
-    openDialog(trigger.dataset.dialogMode, trigger);
-  });
-});
+  if (!formStatus) return;
 
-dialogCloseButtons.forEach((button) => {
-  button.addEventListener("click", closeDialog);
-});
-
-dialog?.addEventListener("click", (event) => {
-  if (event.target === dialog) closeDialog();
-});
-
-dialog?.addEventListener("close", () => {
-  document.body.classList.remove("dialog-open");
-  dialogReturnFocus?.focus();
-});
-
-dialog?.addEventListener("cancel", () => {
-  document.body.classList.remove("dialog-open");
+  formStatus.hidden = false;
+  formStatus.focus({ preventScroll: true });
 });

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#013220">
+  <title>Contact | RPM Social Club</title>
+  <meta name="description" content="Contact RPM Social Club about membership, private events, simulators, merchandise, vehicle showcases, partnerships, and general inquiries.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rpmsocialclub.com/contact/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RPM Social Club">
+  <meta property="og:title" content="Contact | RPM Social Club">
+  <meta property="og:description" content="Start a future membership, event, showcase, merchandise, or general inquiry with RPM Social Club.">
+  <meta property="og:url" content="https://rpmsocialclub.com/contact/">
+  <meta property="og:image" content="https://rpmsocialclub.com/assets/images/rpm-club-lounge-placeholder.jpg">
+  <meta property="og:image:alt" content="Concept view of the RPM Social lounge">
+  <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="shell nav">
+      <a class="brand" href="/" aria-label="RPM Social Club home"><span class="brand__mark">RPM</span><span class="brand__name">Social Club</span></a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><span class="sr-only">Open navigation</span><span class="nav__toggle-line" aria-hidden="true"></span><span class="nav__toggle-line" aria-hidden="true"></span></button>
+      <nav class="nav__menu" id="site-navigation" aria-label="Primary navigation">
+        <a href="/">Home</a><a href="/club/">The Club</a><a href="/events/">Events</a><a href="/membership/">Membership</a><a href="/experiences/">Experiences</a><a href="/merchandise/">Merchandise</a>
+        <a href="https://www.instagram.com/rpmsocialclub/" target="_blank" rel="noopener noreferrer" aria-label="RPM Social Club on Instagram (opens in a new tab)">Instagram</a>
+        <a class="nav__cta" href="/contact/" aria-current="page">Contact / Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero page-hero--compact" aria-labelledby="page-title">
+      <div class="page-hero__media" aria-hidden="true"><img src="/assets/images/rpm-club-lounge-placeholder.jpg" width="1823" height="863" alt="" fetchpriority="high" decoding="async"></div>
+      <div class="page-hero__veil" aria-hidden="true"></div>
+      <div class="shell page-hero__inner">
+        <div data-reveal>
+          <p class="eyebrow"><span>Contact / Join</span> RPM Social Club</p>
+          <h1 id="page-title">Start the<br><em>conversation.</em></h1>
+          <p class="page-hero__intro">Membership, events, simulators, merchandise, vehicle showcases, partnerships, or a general question—tell us what brings you to RPM.</p>
+        </div>
+        <p class="page-hero__status" data-reveal>Form preview · Backend not connected</p>
+      </div>
+    </section>
+
+    <section class="section contact-section" aria-labelledby="contact-form-title">
+      <div class="shell contact-layout">
+        <div class="contact-intro" data-reveal>
+          <p class="section-kicker"><span>01</span> Your inquiry</p>
+          <h2 id="contact-form-title">How can RPM<br>help?</h2>
+          <p>The form is structured for a future ticketing or contact service. It currently validates in your browser but does not transmit or store any information.</p>
+
+          <div class="contact-detail">
+            <p class="site-footer__label">Location</p>
+            <p>Naples, Florida</p>
+          </div>
+          <div class="contact-detail">
+            <p class="site-footer__label">Instagram</p>
+            <a href="https://www.instagram.com/rpmsocialclub/" target="_blank" rel="noopener noreferrer">
+              <span class="instagram-icon instagram-icon--small" aria-hidden="true"><i></i></span>
+              @rpmsocialclub
+            </a>
+          </div>
+        </div>
+
+        <!--
+          FUTURE FORM INTEGRATION:
+          Configure the real submission endpoint in this form's action attribute,
+          then remove or replace the preview-only submit handler in /js/main.js.
+          No data is transmitted by the current implementation.
+        -->
+        <form class="contact-form" action="/contact/" method="post" data-contact-form data-reveal>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="first-name">First Name</label>
+              <input id="first-name" name="firstName" type="text" autocomplete="given-name" required>
+            </div>
+            <div class="form-field">
+              <label for="last-name">Last Name</label>
+              <input id="last-name" name="lastName" type="text" autocomplete="family-name" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone <span>Optional</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="form-field form-field--full">
+              <label for="inquiry-type">Inquiry Type</label>
+              <select id="inquiry-type" name="inquiryType" required data-inquiry-type>
+                <option value="">Select an inquiry type</option>
+                <option value="membership">Membership</option>
+                <option value="private-events">Private Events</option>
+                <option value="simulator">Simulator Experience</option>
+                <option value="merchandise">Merchandise</option>
+                <option value="vehicle-showcase">Vehicle Showcase</option>
+                <option value="partnerships">Partnerships</option>
+                <option value="general">General Inquiry</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-field form-field--full">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" required>
+            </div>
+            <div class="form-field form-field--full">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="7" required></textarea>
+            </div>
+          </div>
+
+          <div class="contact-form__footer">
+            <p>No information will be sent or stored while the form remains in preview mode.</p>
+            <button class="button button--green" type="submit">Review inquiry</button>
+          </div>
+          <p class="form-status" role="status" tabindex="-1" data-form-status hidden>
+            Your fields are complete. Submission is not connected yet, so no information was sent.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section contact-paths" aria-labelledby="contact-paths-title">
+      <div class="shell">
+        <div class="section-heading section-heading--compact" data-reveal>
+          <p class="section-kicker"><span>02</span> What brings you here?</p>
+          <h2 id="contact-paths-title">A clear path<br>to the right conversation.</h2>
+        </div>
+        <div class="benefit-grid">
+          <article data-reveal><span>01</span><h3>Membership</h3><p>Touring, Grand Touring, VIP, access, and future enrollment questions.</p></article>
+          <article data-reveal><span>02</span><h3>Private Events</h3><p>Company gatherings, watch parties, celebrations, and private hospitality concepts.</p></article>
+          <article data-reveal><span>03</span><h3>Club Experiences</h3><p>Simulators, vehicle showcases, merchandise, drives, and destination ideas.</p></article>
+          <article data-reveal><span>04</span><h3>Partnerships</h3><p>Future brand, community, hospitality, or automotive collaboration inquiries without implying an existing relationship.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="site-footer__top"><a class="brand brand--footer" href="/" aria-label="RPM Social Club home"><span class="brand__mark">RPM</span><span class="brand__name">Social Club</span></a><p>Coffee. Cars. Community.<br><span>Naples, Florida</span></p></div>
+      <div class="site-footer__grid">
+        <nav aria-label="Footer navigation"><p class="site-footer__label">Explore</p><a href="/club/">The Club</a><a href="/events/">Events</a><a href="/membership/">Membership</a><a href="/experiences/">Experiences</a><a href="/merchandise/">Merchandise</a><a href="/contact/">Contact / Join</a></nav>
+        <div><p class="site-footer__label">Social</p><a class="site-footer__instagram" href="https://www.instagram.com/rpmsocialclub/" target="_blank" rel="noopener noreferrer"><span class="instagram-icon instagram-icon--small" aria-hidden="true"><i></i></span>@rpmsocialclub</a></div>
+        <div class="site-footer__legal"><p>© <span data-year></span> RPM Social Club</p><p>Drive in. Hang out. Connect.</p></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
